@@ -54,9 +54,26 @@ const GetOneEmployee = async (req,res) =>{
        });      
     }
 }
+//update employee
+const UpdateEmployee = async (req, res) => {
+    try {
+        const employeeID = req.params.employeeID;
+        const updateEmployee = await Employee.findByIdAndUpdate(employeeID,{$set:req.body});
+        res.status(200).json({      
+            success: true,           
+            updateEmployee: updateEmployee,    
+        }); 
+    } catch (err) {
+        res.status(400).json({     
+            error: err,    
+       });  
+    }
+}
+
 
 module.exports = {
     NewEmployee,
     getAllEmployee,
     GetOneEmployee,
+    UpdateEmployee,
 };
