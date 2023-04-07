@@ -1,19 +1,9 @@
 # Team Name - 2023_ITPM_097
-# Project Group - 099
+# Project Group - 097
 
 ### Group Leader - IT20642228 S.M.I.U.B. Egodawela (IsuruEgodawela)
 ### Member 2 - IT20604226  Hapuarachchi H.A.A (IT20604226)
 ### Member 3 - IT20650148  L.A.Dhanushika (AnjaliDhanushika)
 ### Member 4 - IT20625184 Rathnayake R.M.A.N (NuwanthiRathnayake)
 
-#### Brief Description of your Solution - A food social network application is a software platform that focuses on connecting individuals who share
-a passion for food. These applications allow users to create a profile, share food-related content, Food
-social network applications often include features that will enable users to follow other users and interact
-with them through comments and likes.
- This web application isrelated to social media and user-generated content. The
-create post function allows users to create and share new posts with photos and descriptions. The create
-profile function allows users to create and manage their own profiles. The follow User function enables
-users to follow other users and keep up with their posts. The manage comment function allows users to
-interact with posts by adding comments and enables the original author to edit their own comment and
-the owner of the post to delete any comments. Together, these functions provide users with the ability
-to create, share, and interact with content on a social media platform.
+#### Brief Description of your Solution - This animal welfare project aims to develop an integrated system that helps animal welfare organizations and shelters manage their operations more efficiently and effectively. The system will incorporate various features such as animal intake, medical records, adoption management, volunteer management, fundraising, and donor management. The system will have a user-friendly interface that allows organizations to easily input and retrieve data, making it easier to manage and track animal care and placement. With this technology, organizations can ensure the animals receive the care and attention they need, and it will also allow for greater visibility into the adoption process. The project will also focus on leveraging technology to enhance the adoption process. Potential adopters will be able to browse available animals and complete the adoption process online, streamlining the process and reducing wait times. Additionally, the system will allow for online donations, making it easier for supporters to contribute to the cause. Overall, this animal welfare IT project will revolutionize the way animal welfare organizations and shelters manage their operations, helping to improve the lives of animals in their care and increase the success rate of adoptions.
