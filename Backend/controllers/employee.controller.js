@@ -3,14 +3,11 @@ const Employee = require("../models/employee");
 //add new employee
 const NewEmployee = async (req,res) => {
     const {
-        name,dob,
-        gender,
-        //contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password
+        name,dob,gender,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password
     } = req.body;
 
     const CreateEmployee = new Employee({
-        name,dob,gender
-        //,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password
+        name,dob,gender,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password
     });
     try{
         await CreateEmployee.save();
@@ -19,13 +16,47 @@ const NewEmployee = async (req,res) => {
             message:"Employee Created Successfully",
             Employee:CreateEmployee,
         });
-    }catch(err){
+    } catch(err) {
         res.status(400).json({
             error:err
         });
     }
 }
 
-module.exports ={
-    NewEmployee
+//get all employee
+const getAllEmployee = async (req,res) => {
+    try {    
+        const Employees = await Employee.find();    
+        res.status(200).json({      
+            success: true,           
+            Employee: Employees,    
+        });  
+    } catch (err) {    
+            res.status(400).json({     
+                 error: err,    
+            });  
+        }
 }
+
+//get one employee
+const GetOneEmployee = async (req,res) =>{
+    try {
+        const employeeID = req.params.employeeID;
+        const Employees = await Employee.findById(employeeID);
+        res.status(200).json({      
+            success: true,           
+            Employee: Employees,    
+        }); 
+
+    } catch (err) {
+        res.status(400).json({     
+            error: err,    
+       });      
+    }
+}
+
+module.exports = {
+    NewEmployee,
+    getAllEmployee,
+    GetOneEmployee,
+};

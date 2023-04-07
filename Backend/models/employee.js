@@ -12,38 +12,38 @@ const EmployeeSchema = mongoose.Schema({
          type: String,    
          required : true,  
       }, 
-    //   contactNo:{   
-    //       type: String,  
-    //       required : true,  
-    //   },  
-    //   jobTitle:{    
-    //      type: String,  
-    //      requied : true, 
-    //   },
-    //   goodName:{
-    //       type: String,  
-    //       required : true, 
-    //   }, 
-    //   PermanentAddress:{   
-    //       type: String,   
-    //       required : true, 
-    //   },  
-    //   NIC:{   
-    //       type: String,   
-    //       required : true, 
-    //   },  
-    //   email:{    
-    //       type: String, 
-    //       required : true,  
-    //   },  
-    //   department:{    
-    //      type: String,  
-    //      required : true, 
-    //   },  
-    //   password:{    
-    //      type: String,    
-    //      required : true,  
-    //    },
+      contactNo:{   
+         type: String,  
+         required : true,  
+      },  
+      jobTitle:{    
+         type: String,  
+         requied : true, 
+      },
+      goodName:{
+          type: String,  
+          required : true, 
+      }, 
+      PermanentAddress:{   
+          type: String,   
+          required : true, 
+      },  
+      NIC:{   
+          type: String,   
+          required : true, 
+      },  
+      email:{    
+          type: String, 
+          required : true,  
+      },  
+      department:{    
+         type: String,  
+         required : true, 
+      },  
+      password:{    
+         type: String,    
+         required : true,  
+       },
 
 
 })
