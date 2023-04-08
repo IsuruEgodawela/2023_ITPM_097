@@ -69,11 +69,28 @@ const UpdateEmployee = async (req, res) => {
        });  
     }
 }
+const DeleteEmployee = (req,res) => {
+    Employee.findByIdAndDelete (req.params.employeeID)
+    .then((Employees) => {
+        res.status(200).json({      
+            success: true,           
+            message: "Employee Deleted Successfully",
+            Employees:Employees,   
+        }); 
+    })
+    .catch ((err) => {
+        res.status(400).json({     
+            error: err,    
+       });  
+    })
 
+}
 
 module.exports = {
     NewEmployee,
     getAllEmployee,
     GetOneEmployee,
     UpdateEmployee,
+    DeleteEmployee,
+
 };
