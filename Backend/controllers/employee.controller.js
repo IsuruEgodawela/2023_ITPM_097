@@ -69,6 +69,7 @@ const UpdateEmployee = async (req, res) => {
        });  
     }
 }
+//delete employee
 const DeleteEmployee = (req,res) => {
     Employee.findByIdAndDelete (req.params.employeeID)
     .then((Employees) => {
