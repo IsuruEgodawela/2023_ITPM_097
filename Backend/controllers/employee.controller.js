@@ -3,11 +3,11 @@ const Employee = require("../models/employee");
 //add new employee
 const NewEmployee = async (req,res) => {
     const {
-        name,dob,gender,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password
+        name,dob,gender,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password,image
     } = req.body;
 
     const CreateEmployee = new Employee({
-        name,dob,gender,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password
+        name,dob,gender,contactNo,jobTitle,goodName,PermanentAddress,NIC,email,department,password,image
     });
     try{
         await CreateEmployee.save();
