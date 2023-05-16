@@ -43,7 +43,10 @@ const vetSchema = new Schema({
       other: {
         type: String,
         required: true
-      }
+      },
+      photo: {
+        type: String
+    }
 
 })
 

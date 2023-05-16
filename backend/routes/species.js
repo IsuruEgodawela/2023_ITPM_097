@@ -1,10 +1,34 @@
 const router = require('express').Router();
 let Vet = require('../models/Vet');
+const multer = require('multer');
+const { v4: uuidv4 } = require('uuid');
+let path = require('path');
+
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+      cb(null, 'images');
+  },
+  filename: function(req, file, cb) {   
+      cb(null, uuidv4() + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+const fileFilter = (req, file, cb) => {
+  const allowedFileTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+  if(allowedFileTypes.includes(file.mimetype)) {
+      cb(null, true);
+  } else {
+      cb(null, false);
+  }
+}
+
+let upload = multer({ storage, fileFilter });
+
 
 http://localhost:8080/species/add
 
-router.route('/add').post((req, res) => {
-    
+router.route('/add').post(upload.single('photo'), (req, res) => {
+
     const code = req.body.code;
     const name = req.body.name;
     const date = req.body.date;
@@ -15,6 +39,7 @@ router.route('/add').post((req, res) => {
     const recovery = req.body.recovery;
     const rplan = req.body.rplan;
     const other = req.body.other;
+    const photo = req.file.filename;
 
     const newSpecies = new Vet({
         code,
@@ -26,10 +51,12 @@ router.route('/add').post((req, res) => {
         tplan,
         recovery,
         rplan,
-        other
+        other,
+        photo
     })
 
-    newSpecies.save()
+    newSpecies
+    .save()
     .then(() => {
       res.json({
         message: 'Species added successfully'
@@ -42,12 +69,13 @@ router.route('/add').post((req, res) => {
     }) 
 
 
+
 http://localhost:8080/species
 
 router.route('/').get((req, res) => {
-    Vet.find()
-        .then(species => res.json(species))
-        .catch(err => console.log(err));
+  Vet.find()
+      .then(species => res.json(species))
+      .catch(err => console.log(err));
 })
 
 http://localhost:8080/species/update/
@@ -75,7 +103,7 @@ router.route('/update/:speciesCode').put(async (req, res) => {
             status: 'Species updated successfully'
         }).catch(err => {
             console.log(err);
-            res .status(500).send({
+            res.status(500).send({
                 message: 'Error updating species', error: err.message
             })
         })
