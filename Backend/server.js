@@ -8,6 +8,7 @@ const path = require('path');
 
 //@import Routes
 const employeeRouter = require('./routes/employee.route');
+const userRouter = require('./routes/user.route');
 
 const app = express();
 dotenv.config();
@@ -61,6 +62,7 @@ app.put('/api/update', update.single('file'), (req, res) => {
 
 //use routes
 app.use('/api/employee', employeeRouter);
+app.use('/api/user', userRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on port number: ${PORT}`);
