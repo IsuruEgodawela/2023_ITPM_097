@@ -9,6 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material/icon-button": "^14.0.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.1",
     "axios": "^1.4.0",
     "mdb-react-ui-kit": "^6.0.0",
     "react": "^18.2.0",
