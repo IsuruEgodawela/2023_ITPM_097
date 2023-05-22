@@ -1,0 +1,266 @@
+*{
+  padding: 0%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+
+body {
+ 
+    /* fallback for old browsers */
+  background: #cd9cf2 url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.animal-job.co.uk%2Fwp-content%2Fuploads%2F2021%2F06%2Fwomen-Animal-Care-Courses.jpg&tbnid=DgsbGRyM23DT7M&vet=10CN0BEDMoygFqFwoTCMDz7OGsg_8CFQAAAAAdAAAAABAC..i&imgrefurl=https%3A%2F%2Fwww.animal-job.co.uk%2Fcourse-category%2Fanimal-care-courses%2F&docid=3QPQGuO9iJdnMM&w=368&h=326&q=animal%20care&ved=0CN0BEDMoygFqFwoTCMDz7OGsg_8CFQAAAAAdAAAAABAC);
+  background-size: cover;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(205, 156, 242, 0.5),
+    rgba(246, 243, 255, 0.5)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(205, 156, 242, 0.5),
+    rgba(246, 243, 255, 0.5)
+  );
+
+
+}
+
+.container {
+  position:relative;
+  background: rgba(167, 33, 211, 0.5);
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-left: 300px;
+}
+.header-name {
+     margin-top: 10px;
+     margin-left: 350px;
+     font-style: normal;
+     color: #111;
+    }
+    .h1{
+      color: #111;
+    }
+.h-name {
+      margin-left : 30px;
+      background: rgba(108, 108, 108, 0.5); ;
+      width: 1200px;
+      padding-left: 50px;
+}
+.Add-container {
+  
+  position:relative;
+  background: rgba(212, 131, 239, 0.5) url(https://www.kindnessoftulsa.com/wp-content/uploads/2018/01/Layer-23.png) ;
+  background-size:cover;
+  padding: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 500px;
+  margin-bottom: 150px;
+  width: 1000px;
+  height: auto;
+
+}
+
+.input-container {
+  position:relative;
+  background: rgba(177, 185, 207, 0.5); ;
+  padding: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 800px;
+}
+
+.content {
+background: rgba(186, 159, 186, 0.5) ;
+padding: 20px; 
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+border-radius: 50px;
+background-size:cover;
+flex: 1;
+text-align: center;
+margin-top: 50px;
+margin-bottom: auto;
+
+}
+h2 {
+  margin-top: 3em;
+  font-size: 2.7vw;
+  letter-spacing: 0.54;
+  margin-bottom: 30px;
+}
+
+
+button {
+  padding: 25px 25px;
+  background: transparent;
+  border: 20px solid main_color;
+  font-size: 1vw;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-bottom: 50px;
+  color:aliceblue;
+  background-color: #b9b6b6;
+
+}
+  hover {
+    color: text_color;
+    background: main_color;
+  }
+
+.btn-save{
+    margin-left: 660px;
+    padding: 10px 90px;
+    color:#fff;
+    background-color: #1b1b1b;
+}
+.searchbar {
+  margin-left: 500px;
+  width: 600px;
+  margin-right:50px;
+}
+
+
+
+
+a:link {
+text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+} 
+nav{
+display: flex;
+height: 80px;
+width: 100%;
+background: #1b1b1b;
+align-items: center;
+justify-content: space-between;
+padding: 0 50px 0 100px;
+flex-wrap: wrap;
+}
+nav .logo{
+   width:auto
+}
+nav ul{
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+}
+nav ul li{
+margin: 0 5px;
+}
+nav ul li a{
+color: #f2f2f2;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+padding: 8px 15px;
+border-radius: 5px;
+letter-spacing: 1px;
+transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+color: #111;
+background: #fff;
+}
+nav .menu-btn i{
+color: #fff;
+font-size: 22px;
+cursor: pointer;
+display: none;
+}
+input[type="checkbox"]{
+display: none;
+}
+@media (max-width: 1000px){
+nav{
+  padding: 0 40px 0 50px;
+}
+}
+@media (max-width: 920px) {
+nav .menu-btn i{
+  display: block;
+}
+#click:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+nav ul{
+  position: fixed;
+  top: 80px;
+  left: -100%;
+  background: #111;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: block;
+  transition: all 0.3s ease;
+}
+#click:checked ~ ul{
+  left: 0;
+}
+nav ul li{
+  width: 100%;
+  margin: 40px 0;
+}
+nav ul li a{
+  width: 100%;
+  margin-left: -100%;
+  display: block;
+  font-size: 20px;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#click:checked ~ ul li a{
+  margin-left: 0px;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  background: none;
+  color: cyan;
+}
+}
+.content{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: -1;
+width: 100%;
+padding: 0 30px;
+color: #1b1b1b;
+}
+.content div{
+font-size: 40px;
+font-weight: 700;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: main_color;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+ 
+}
+ 
